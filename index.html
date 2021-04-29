@@ -11,11 +11,17 @@
 
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <style>
+      #main {
+          margin: 0 3em;
+      }
       .row + .row {
           margin-top: 10px;
       }
       .sidebar {
-          margin-left: 3em;
+          margin-bottom: 3em;
+      }
+      .content {
+          margin-left: 15px;
       }
       blockquote {
           font-style: italic;
@@ -29,7 +35,6 @@
           height: 6em;
       }
       .friend1, .friend2, .friend3 {
-        width: 250px;
         height: 120px;
         background-repeat: no-repeat;
         background-position: center;
@@ -37,6 +42,11 @@
       }
       .friend1[aria-checked="true"], .friend2[aria-checked="true"], .friend3[aria-checked="true"] {
         border: 2px solid #00a;
+      }
+      table.friends {
+        table-layout: fixed;
+        width: 100%;
+        border: 0;
       }
       .friend1 {
         background-image: url('assets/img/cat1.jpg');
@@ -48,9 +58,6 @@
       .friend3 {
         background-image: url('assets/img/cat3.jpg');
         border: 2px solid #fff;
-      }
-      table {
-        border: 0;
       }
       td {
         text-align: center;
@@ -99,7 +106,7 @@
 
       <div class="container-fluid" id="main">
         <div class="row">
-          <div class="col-md-2 sidebar">
+          <div class="col-sm-3 sidebar">
             <div>
               <img src="assets/img/200.jpeg" class="img-thumbnail" alt="profile picture">
             </div>
@@ -108,12 +115,12 @@
               <button data-toggle="modal" data-target="#modal" class="btn btn-primary btn-large">Complete profile</button>
             </div>
           </div>
-          <div class="col-md-6 col-md-offset-1">
+          <div class="col-sm-8 content">
             <div class="row">
               <textarea placeholder="What are you meowing about?"></textarea>
               <div>
                 Share with...
-                <table>
+                <table class="friends">
                   <tr>
                     <td><div class="friend1" role="checkbox" aria-checked="true"
                              tabindex=0 aria-labelledby="label1"></div></td>
