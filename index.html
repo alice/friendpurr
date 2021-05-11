@@ -134,7 +134,7 @@
       popupLink.addEventListener('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
-        if (openedWindow) {
+        if (openedWindow && !openedWindow.closed) {
           openedWindow.focus();
           return false;
         }
@@ -143,12 +143,8 @@
         let height = Math.min(1000, screen.height - 200);
         let left = screen.width - width - 20;
         let top = 0;
-        console.log('Screen width: ' + screen.width);
-        console.log('Width: ' + width);
-        console.log('Left: ' + left);
-        console.log(`width=${width},height=${height},screenX=${left},screenY=${top}`);
         openedWindow = window.open(
-          "index.html",
+          "friendpurr.html",
           "newwindow",
           `width=${width},height=${height},screenX=${left},screenY=${top}`);
         return false;
