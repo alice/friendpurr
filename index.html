@@ -10,67 +10,27 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400,700" rel="stylesheet">
     <style>
-      #topbar {
-          background-color: #fff6cc;
-          text-align: center;
-          font-family: Roboto, sans-serif;
-          font-size: 14pt;
-          margin: 0;
-          padding: 1em 2em;
-          height: 100px;
-          width: 100%;
+      h1, h2 {
+          font-family: 'Google Sans', Arial, sans-serif;
+          font-weight: 700;
+      }
+      li, p {
+          font-family: 'Google Sans Text', Arial, sans-serif;
+          font-weight: 400;
+          font-size: 12pt;
+      }
+      li {
+          margin: 1em 0;
+      }
+
+      img.hashtag {
+          margin-left: -5px;
       }
       #main {
-          margin: 0 3em;
-      }
-      .row + .row {
-          margin-top: 10px;
-      }
-      .sidebar {
-          margin-bottom: 3em;
-      }
-      .content {
-          margin-left: 15px;
-      }
-      blockquote {
-          font-style: italic;
-          font-family: Garamond, serif;
-      }
-      .muted {
-          color: #888;
-      }
-      .row textarea {
-          width: 100%;
-          height: 6em;
-      }
-      .friend1, .friend2, .friend3 {
-        height: 120px;
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 2px solid #fff;
-      }
-      .friend1[aria-checked="true"], .friend2[aria-checked="true"], .friend3[aria-checked="true"] {
-        border: 2px solid #00a;
-      }
-      table.friends {
-        table-layout: fixed;
-        width: 100%;
-        border: 0;
-      }
-      .friend1 {
-        background-image: url('assets/img/cat1.jpg');
-      }
-      .friend2 {
-        background-image: url('assets/img/cat2.jpg');
-        border: 2px solid #fff;
-      }
-      .friend3 {
-        background-image: url('assets/img/cat3.jpg');
-        border: 2px solid #fff;
-      }
-      td {
-        text-align: center;
+          margin: 3em;
       }
     </style>
   </head>
@@ -79,9 +39,10 @@
     <div id="container">
       <div class="container-fluid" id="main">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-6">
 
-            <img src="io_hashtag_small.gif" alt="Hashtag Google I/O">
+            <img class="hashtag"
+                 src="io_hashtag_small.gif" alt="Hashtag Google I/O">
 
             <h2>Intro</h2>
 
@@ -109,20 +70,87 @@
                     to silence speech at any time.  If you haven’t
                     used ChromeVox, consider running through our
                     tutorial by pressing Search + O, then T.
-                    <li>
-                      On Mac, you can triple press the power button on
-                      the touch bar to turn on and use ctrl + option
-                      and the arrow keys to move and ctrl + option
-                      space to select.
-                    <li>
-                      NVDA on Windows: Download the free and open
-                      source screen reader here Enable: Ctrl + Alt + N
-                      Disable: Insert + Q
+                  <li>
+                    On Mac, you can triple press the power button on
+                    the touch bar to turn on and use ctrl + option
+                    and the arrow keys to move and ctrl + option
+                    space to select.
+                  <li>
+                    NVDA on Windows: Download the free and open
+                    source screen reader here Enable: Ctrl + Alt + N
+                    Disable: Insert + Q
                 </ul>
               <li>
                 Navigate through the page using the keyboard and
                 screen reader:
+                <ul>
+                  <li>ChromeVox on Chrome OS Use ChromeVox navigation
+                    (Search + Right arrow to go forwards, or Search +
+                    Left arrow to go backwards) to navigate through
+                    the page and explore its accessibility.
+                  <li>Voiceover on Mac
+                    <ul>
+                      <li>Press Ctrl + Option + Right to move forward
+                      item by item, Ctrl + Option + Left to move
+                      backwards
+
+                      <li>When you want to move to a different part of
+                          the browser (e.g. from the toolbar to the
+                          web content) you will be prompted to enter
+                          that section through pressing Ctrl + Option
+                          + Shift + Down, and likewise Ctrl + Option +
+                          Shift + Up to exit that area when done
+
+                      <li>Press Enter or Ctrl + Option + Space to
+                        activate an item
+                    </ul>
+                  <li>
+                    NVDA on Windows
+                    <ul>
+                      <li>Use the arrow keys to move item by item
+                      <li>Press Enter to activate
+                    </ul>
+                </ul>
+              <li>Take a look at the content with the screen reader:
+                <ul>
+                  <li>Use Tab to navigate through the top links.  What
+                    do you notice?
+
+                  <li>Turn on the screen reader and navigate to the
+                    images on the page.  Anything that needs to be updated?
+
+                  <li>Can you navigate everywhere you need to? Is your
+                    focus position clear?
+                </ul>
+              <li>
+                Take a look at contrast ratios:
+
+                <ul>
+                  <li>In addition to using the screen reader, take a
+                    look at the contrast on the page.  Are the
+                    contrast ratios meeting at a minimum 4.5:1 for
+                    text to background?
+
+                  <li>Use the Lighthouse DevTools audit to see which
+                    areas are not meeting the minimum.
+                </ul>
+              <li>
+                Make a note of issues you come across, or places where
+                you feel like the usability could be improved.
             </ol>
+
+            <h2>Scenarios:</h2>
+
+            <ol>
+              <li>
+                Use tab to navigate through the top headings.  What do
+                you notice?
+              <li>Turn on the screen reader and navigate to the images on
+                the page.  Anything that needs to be updated?
+              <li>Read the content on the page.  Can you tell using a
+                screen reader what’s the image that’s relevant to the page?
+            </ol>
+
           </div>
         </div>
       </div>
